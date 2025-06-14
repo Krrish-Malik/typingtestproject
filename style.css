@@ -1,0 +1,158 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') no-repeat center center fixed;
+  background-size: cover;
+  transition: all 0.3s ease;
+}
+
+body.dark {
+  background: #121212 !important;
+  color: #eee;
+}
+
+#animated-title {
+  font-size: 36px;
+  margin-bottom: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid;
+  width: 0;
+  animation: typing 3s steps(50, end) forwards, blink 0.75s step-end infinite;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: #4CAF50;
+}
+
+body.dark #animated-title {
+  color: #bb86fc;
+  border-color: #bb86fc;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  from, to { border-color: transparent; }
+  50% { border-color: #4CAF50; }
+}
+
+.toggle-dark {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  padding: 8px 16px;
+  background: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+body.dark .toggle-dark {
+  background: #bb86fc;
+  color: #121212;
+}
+
+#test-text,
+#input-box,
+#leaderboard {
+  background-color: #ffffff;
+  color: #111;
+  border-radius: 8px;
+  padding: 16px;
+  width: 90%;
+  max-width: 800px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+body.dark #test-text,
+body.dark #input-box,
+body.dark #leaderboard {
+  background-color: #1e1e1e;
+  color: #eee;
+}
+
+#input-box {
+  height: 120px;
+  resize: none;
+  font-size: 16px;
+}
+
+#stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+#suggestions {
+  font-style: italic;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+body.dark #suggestions {
+  color: #ccc;
+}
+
+.controls button {
+  padding: 12px 20px;
+  margin: 8px;
+  font-size: 16px;
+  background: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+body.dark .controls button {
+  background: #bb86fc;
+  color: #121212;
+}
+
+#username {
+  padding: 10px;
+  font-size: 16px;
+  width: 300px;
+  max-width: 90%;
+  margin: 10px 0;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+}
+
+#leaderboard ol {
+  padding-left: 20px;
+}
+
+#leaderboard li {
+  font-size: 18px;
+  margin: 6px 0;
+  word-wrap: break-word;
+}
+
+footer {
+  margin-top: auto;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #888;
+}
+
+body.dark footer {
+  color: #aaa;
+}

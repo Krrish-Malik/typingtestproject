@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Krrish & Kanishk's Typing Speed Test</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1 id="animated-title"></h1>
+
+  <button onclick="toggleDarkMode()" class="toggle-dark">🌙 Toggle Dark Mode</button>
+
+  <div id="countdown-display"></div>
+  <div id="test-text">Click start to begin typing test.</div>
+  <textarea id="input-box" placeholder="Start typing here..." disabled></textarea>
+  <div id="suggestions"></div>
+
+  <div id="stats">
+    <p>⏱ Time: <span id="timer">0</span>s</p>
+    <p>💨 WPM: <span id="wpm">0</span></p>
+    <p>🎯 Accuracy: <span id="accuracy">100</span>%</p>
+    <p>❌ Errors: <span id="errors">0</span></p>
+  </div>
+
+  <input type="text" id="username" placeholder="Enter your name" />
+  <div class="controls">
+    <button onclick="startTest()">Start</button>
+    <button onclick="resetTest()">Reset</button>
+  </div>
+
+  <div id="leaderboard"></div>
+
+  <footer>
+    <p>Made with 💻 by Krrish & Kanishk</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
